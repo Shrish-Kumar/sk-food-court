@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Rubik:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.books {
+    max-width: 200px;
+}
+
+.games,
+.crafts {
+    max-width: 300px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.section-container {
+    padding: 5%;
+    flex-direction: column;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    /* align-items: center; */
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  background-color: #7EC855;
+  font-family: 'Roboto', sans-serif;
+}
+
+.shopping-cart {
+  width: 750px;
+  height: 560px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+/* Buttons -  Delete and Like */
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  display: inline-block;
+  background: url('ht.png');
+  width: 20px;
+  height: 20px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: red;
+}
+
+input{
+  font-size: 40px;
+  text-align: center;
+  color: red;
+  align-content: center;
+}
+
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+/* Product Image */
+.image {
+  margin-right: 50px;
+}
+
+/* Product Description */
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.description span {
+  display: block;
+  font-size: 20px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+/* Product Quantity */
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+
+/* Total Price */
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 10px;
+      height: 10px;
+  }
+  .image,
+  .quantity,
+  .description {
+    
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
+nav>div {
+    padding: 0% 5%;
+}
+
+nav img {
+    height: 30px;
+}
+
+#cart {
+    font-weight: bold;
+}
+
+header {
+    height: 800px;
+    background-image: url("https://wallpaperaccess.com/full/1317087.jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    color: white;
+}
+
+header h1 {
+    font-size: 7vh;
+}
+
+header h5 {
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.header-text {
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 20%;
+    padding: 4% 5%;
+}
+
+.item-container {
+    margin: 3% 0%;
+}
+
+.button {
+    cursor: pointer;
+    background-color: #6095ff;
+    color: white;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+.button>img {
+    width: 20px;
+    padding-left: 5px;
+}
+
+
+.buy {
+    margin-top: 15px;
+    padding-bottom: 50px;
+}
+
+footer {
+    height: 300px;
+    background-image: url("http://i1.faceprep.in/prograd-junior/footer-bg.png");
+    background-size: 100% 100%;
+    color: white;
+    padding: 0% 5%;
+}
+
+footer img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#details {
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+}
+
+h4 {
+    color: grey;
+    font-weight: lighter;
+}
+
+h6 {
+    font-size: 17px;
+}
+
+.buy p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h3,
+h2 {
+    margin-bottom: 10px;
+}
+
+.container {
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 200px;
+        width: 100%;
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .header-text {
+        padding: 2% 60% 5% 5%;
+    }
+
+    header h1 {
+        font-size: 4vh;
+    }
+
+    header h5 {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .container {
+        justify-content: center;
+    }
+}
+
+h1, h2, h3, h4, h5,h6{
+  font-size: 25px;
+} 
+
+h2{
+  font-size: 30px;
+}

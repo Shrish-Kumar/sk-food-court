@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+<script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+    <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        BBQ cart
+      </div>
+
+      <!-- Product #1 -->
+      <div class="item">
+        <div class="buttons"> 
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="prawn 65.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span></span>
+          <span>Prawn 65</span>
+          <span></span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">Rs.140</div>
+      </div>
+
+      <!-- Product #2 -->
+      <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="mutton pepper fry.png" alt=""/>
+        </div>
+
+        <div class="description">
+          <span>Mutton pepper Fry</span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">RS.120</div>
+      </div>
+
+      <!-- Product #3 -->
+      <div class="item">
+        <div class="buttons">
+          
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="chicken nugets.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Chicken Nugets</span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">Rs.250</div>
+      </div>
+
+      <!-- Product #1 -->
+      <div class="item">
+        <div class="buttons">
+          
+          <span class="like-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="popcorn chicken.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span><b>Chicken popcorn</b></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">Rs.250</div>
+      </div>
+
+      
+    </div>
+
+    <center><p>
+        <input type = "button" value = "Buy...Now" onclick = "fun();" />  </p></center>
+
+    <script type="text/javascript">
+      $('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
+    </script>
+  </body>
+</html>
